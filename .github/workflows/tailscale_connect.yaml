@@ -1,0 +1,15 @@
+name: Connect Tailscale
+
+permissions:
+  id-token: write
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: liatrio/github-actions/tailscale-connect-kpv3@tailscale-connect-kpv3
